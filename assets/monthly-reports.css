@@ -124,7 +124,35 @@
   margin: 12px 0;
   text-wrap: pretty;
 }
+.monthly-report .archive-year {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+.monthly-report .archive-months {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.monthly-report .archive-months a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 0;
+  color: var(--accent);
+  font-size: 14px;
+}
+.monthly-report .archive-months a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 @media (max-width: 650px) {
+  .monthly-report .archive-months {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
   .monthly-report .monthly-leaders {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
