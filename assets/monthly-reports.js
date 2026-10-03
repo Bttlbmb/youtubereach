@@ -38,6 +38,13 @@ if (ranking) {
           .setAttribute("aria-sort", selected ? "descending" : "none");
       }
     }
+    for (const link of document.querySelectorAll("a[data-report-month]")) {
+      const url = new URL(link.getAttribute("href"), location.href);
+      url.searchParams.set("report", link.dataset.reportMonth);
+      if (sort === "reach") url.searchParams.set("report_sort", "reach");
+      else url.searchParams.delete("report_sort");
+      link.setAttribute("href", url.pathname + url.search + url.hash);
+    }
     if (save) {
       const url = new URL(location.href);
       if (sort === "reach") url.searchParams.set("sort", sort);
