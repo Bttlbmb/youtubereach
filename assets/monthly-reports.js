@@ -45,6 +45,15 @@ if (ranking) {
       else url.searchParams.delete("report_sort");
       link.setAttribute("href", url.pathname + url.search + url.hash);
     }
+    for (const link of document.querySelectorAll("a[data-channel-report-month]")) {
+      const url = new URL(link.getAttribute("href"), location.href);
+      const opening = new URLSearchParams(url.searchParams.get("return_query"));
+      opening.set("report", link.dataset.channelReportMonth);
+      if (sort === "reach") opening.set("report_sort", "reach");
+      else opening.delete("report_sort");
+      url.searchParams.set("return_query", opening.toString());
+      link.setAttribute("href", url.pathname + url.search + url.hash);
+    }
     if (save) {
       const url = new URL(location.href);
       if (sort === "reach") url.searchParams.set("sort", sort);
