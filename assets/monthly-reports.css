@@ -16,12 +16,6 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.monthly-report .kicker {
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
 .monthly-report .report-heading h2 {
   font-size: clamp(24px, 3.4vw, 34px);
   line-height: 1.35;
@@ -32,14 +26,6 @@
 }
 .monthly-report .site-intro {
   margin-bottom: 14px;
-}
-.monthly-report .report-dates {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 24px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.6;
 }
 .monthly-report .gap-notice {
   color: var(--muted);
