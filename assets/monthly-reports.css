@@ -55,7 +55,7 @@
   margin-bottom: 8px;
 }
 .monthly-report main h3 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.4px;
   line-height: 1.35;
@@ -63,6 +63,7 @@
   margin-bottom: 8px;
 }
 .monthly-report .leader h3 {
+  font-size: 19px;
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -172,5 +173,23 @@
   }
   .monthly-report .score-value {
     font-size: 30px;
+  }
+  /* A combined leader puts its two scores side by side, labelled above. */
+  .monthly-report .combined .leader-scores {
+    flex-wrap: nowrap;
+    gap: 0 28px;
+    padding-top: 10px;
+  }
+  .monthly-report .combined .leader-score {
+    flex: 1 1 0;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .monthly-report .combined .score-label {
+    font-size: 12px;
+  }
+  .monthly-report .combined .score-label::first-letter {
+    text-transform: uppercase;
   }
 }
